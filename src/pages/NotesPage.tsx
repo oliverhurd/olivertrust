@@ -58,10 +58,22 @@ export function NotesPage() {
                 <span className="mr-2">📁</span> PLATFORM PLAYBOOKS
               </div>
               <ul className="space-y-1">
-                {['Algorithm Calibration', 'YouTube Strategy', 'Twitter/X Growth', 'Newsletter System'].map((item) => (
-                  <li key={item}>
-                    <button className="w-full text-left px-3 py-2 rounded-md text-gray-body hover:bg-gray-50 hover:text-navy-dark text-sm transition-colors">
-                      {item}
+                {[
+                  { label: 'YouTube Strategy', key: 'youtube-strategy' },
+                  { label: 'Algorithm Calibration', key: 'algorithm-calibration' },
+                  { label: 'Twitter/X Growth', key: 'twitter-growth' },
+                  { label: 'Newsletter System', key: 'newsletter-system' },
+                ].map((item) => (
+                  <li key={item.key}>
+                    <button
+                      onClick={() => setActiveNote(item.key)}
+                      className={`w-full text-left px-3 py-2 rounded-md text-sm transition-colors ${
+                        activeNote === item.key
+                          ? 'bg-gray-badge text-navy-dark font-medium'
+                          : 'text-gray-body hover:bg-gray-50 hover:text-navy-dark'
+                      }`}
+                    >
+                      {item.label}
                     </button>
                   </li>
                 ))}
@@ -312,6 +324,154 @@ export function NotesPage() {
               <blockquote className="border-l-2 border-gray-divider pl-6 italic text-gray-light text-lg my-10">
                 "Money hates desperation. Think long-term. Build the relationship, add value, and when the time is right the sale becomes effortless."
               </blockquote>
+
+            </div>
+          </article>
+        )}
+
+        {/* YOUTUBE STRATEGY NOTE */}
+        {activeNote === 'youtube-strategy' && (
+          <article className="flex-1 max-w-2xl">
+            <header className="mb-10">
+              <div className="text-xs font-bold text-gray-light tracking-wider uppercase mb-3">Platform Playbooks</div>
+              <h1 className="text-4xl md:text-5xl font-serif font-bold text-navy-dark mb-4">YouTube Strategy</h1>
+              <div className="text-sm text-gray-light">Braveheart Trading · 5 parts · 15 min read</div>
+            </header>
+
+            <div className="prose prose-lg prose-slate max-w-none">
+
+              <p className="text-gray-body leading-relaxed mb-6 border-l-2 border-amber-400 pl-5 text-lg">
+                Spend 1 hour per week on YouTube consistently and it feeds everything — authority, trust, positioning, and revenue. It's the most asymmetric thing you can do for your business.
+              </p>
+
+              <h3 className="text-2xl font-serif font-bold text-navy-dark mb-4 mt-12">Part 1: The System</h3>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {[
+                  { label: 'Channel as System', desc: 'See the channel as a system, not a personal brand. You are a business owner with a product — the channel serves the market, not your ego.' },
+                  { label: 'Niche First', desc: 'Build everything around your niche. The better you understand them, the more they click, watch, and find things valuable.' },
+                  { label: 'Long-term Thinking', desc: "YouTube is a 1–2 year game minimum. Build something for the next 10 years, not for recent causes." },
+                  { label: 'Input Goals', desc: "Don't set subscriber goals (outputs). Set content volume goals (inputs). Control what you can control." },
+                ].map(({ label, desc }) => (
+                  <div key={label} className="bg-gray-50 border border-gray-200 rounded-lg p-5">
+                    <h4 className="font-serif font-semibold text-navy-dark mb-2">{label}</h4>
+                    <p className="text-sm text-gray-body leading-relaxed">{desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-8">
+                <p className="text-[10px] font-bold tracking-widest uppercase text-gray-light mb-3">The Success Formula</p>
+                <p className="text-navy-dark font-semibold text-lg mb-2">YT Success = (CTR × Watch Time) / (Value × Volume) ^ time</p>
+                <div className="space-y-1 text-sm text-gray-body">
+                  <p><strong className="text-navy-dark">CTR</strong> — Getting people to click. Most important.</p>
+                  <p><strong className="text-navy-dark">Watch Time</strong> — Getting people to stay. Most important.</p>
+                  <p><strong className="text-navy-dark">Value × Volume</strong> — Consistently valuable content.</p>
+                  <p><strong className="text-navy-dark">Time</strong> — The compounding multiplier. Cannot be skipped.</p>
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-serif font-bold text-navy-dark mb-4 mt-12">Part 2: The Value Fountain</h3>
+              <p className="text-gray-body leading-relaxed mb-5">The less your channel is about value, the more it starts to die. Every video should contain as many of these factors as possible:</p>
+
+              <div className="space-y-2 mb-8">
+                {[
+                  ['Solution', 'Helps the market solve a painful problem or potential problem'],
+                  ['Information', 'Helps the market acquire useful or interesting knowledge'],
+                  ['Perspective', 'Gives a unique or new lens on something familiar'],
+                  ['Understood', 'Makes the market feel someone genuinely gets them'],
+                  ['Motivation', 'Makes the market feel pumped up or excited to act'],
+                  ['Resonance', 'Meets the market where it actually is emotionally'],
+                  ['Entertainment', 'Cures boredom — keeps people watching'],
+                ].map(([title, desc]) => (
+                  <div key={title} className="flex items-start gap-4 border border-gray-200 rounded-lg p-4">
+                    <span className="text-[10px] font-bold tracking-widest uppercase text-amber-500 w-24 shrink-0 pt-0.5">{title}</span>
+                    <p className="text-sm text-gray-body leading-relaxed">{desc}</p>
+                  </div>
+                ))}
+              </div>
+
+              <blockquote className="border-l-2 border-gray-divider pl-6 italic text-gray-light text-lg my-10">
+                "If you can contain all seven factors in one video, you have a superb video the market thirsts over."
+              </blockquote>
+
+              <h3 className="text-2xl font-serif font-bold text-navy-dark mb-4 mt-12">Part 3: Ideation System</h3>
+              <p className="text-gray-body leading-relaxed mb-5">
+                Ideation is the most important process on YouTube. Great ideas with great packaging and distribution are what produce appointments and enrollments.
+              </p>
+
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-6">
+                <p className="text-[10px] font-bold tracking-widest uppercase text-gray-light mb-3">The Golden Idea Principle</p>
+                <p className="text-sm text-gray-body leading-relaxed">An idea you understand well enough to articulate for 5–20 minutes <em>and</em> one the market finds valuable. Both conditions must be met.</p>
+              </div>
+
+              <p className="text-gray-body leading-relaxed mb-4">Four proven ideation methods:</p>
+              <div className="space-y-3 mb-8">
+                {[
+                  { n: '01', title: 'Grab & Twist', desc: "Take a competitor's popular idea and add your unique spin or angle." },
+                  { n: '02', title: 'Series Ideation', desc: 'Create a static series — e.g. one cognitive bias per week. 100 biases = 2 years of content.' },
+                  { n: '03', title: 'Comment-based', desc: 'Ask viewers to comment problems or requests relevant to your content pillars.' },
+                  { n: '04', title: 'Strange Latticework', desc: 'Use frameworks from unrelated disciplines (physics, biology, chess) to explain your topic.' },
+                ].map(({ n, title, desc }) => (
+                  <div key={n} className="flex gap-5 items-start border border-gray-200 rounded-lg p-5">
+                    <span className="font-serif text-xl text-amber-400 leading-none shrink-0 w-8">{n}</span>
+                    <div>
+                      <p className="font-medium text-navy-dark mb-1">{title}</p>
+                      <p className="text-sm text-gray-body leading-relaxed">{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <h3 className="text-2xl font-serif font-bold text-navy-dark mb-4 mt-12">Part 4: Packaging System</h3>
+              <p className="text-gray-body leading-relaxed mb-5">
+                70% is the value from the video. 30% is packaging for initial and continuous interest. View your video like a product in a supermarket — good packaging sells the most.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-5">
+                  <p className="text-[10px] font-bold tracking-widest uppercase text-amber-500 mb-2">Titles</p>
+                  <ul className="space-y-1 text-sm text-gray-body">
+                    {['Incentives', 'Negativity', 'Lists', 'Curiosity', 'Timelines', 'Beginner', 'Objections', 'Authority', 'Desire'].map(t => (
+                      <li key={t} className="flex items-center gap-2"><span className="w-1 h-1 bg-gray-400 rounded-full shrink-0" />{t}</li>
+                    ))}
+                  </ul>
+                  <p className="text-xs text-gray-light mt-3">Viral titles combine multiple types. Include buzzwords often.</p>
+                </div>
+                <div className="bg-gray-50 border border-gray-200 rounded-lg p-5">
+                  <p className="text-[10px] font-bold tracking-widest uppercase text-amber-500 mb-2">Thumbnails</p>
+                  <ul className="space-y-1 text-sm text-gray-body">
+                    {['Always show face + emotion (left side)', 'Thumbnail supports the title', 'Gives the title visual context', 'Create 20–30 different head/shoulder selfies'].map(t => (
+                      <li key={t} className="flex items-start gap-2"><span className="mt-1.5 w-1 h-1 bg-gray-400 rounded-full shrink-0" />{t}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <blockquote className="border-l-2 border-gray-divider pl-6 italic text-gray-light text-lg my-10">
+                "Promise insane value — and actually deliver it. That's the entire YouTube strategy."
+              </blockquote>
+
+              <h3 className="text-2xl font-serif font-bold text-navy-dark mb-4 mt-12">Part 5: Consistency</h3>
+              <p className="text-gray-body leading-relaxed mb-5">
+                Get it done every week, come hell or high water. Consistency is rewarded. Inconsistency is punished. The algorithm gives you things over time — and when you stop, those things fade.
+              </p>
+
+              <div className="space-y-3 mb-8">
+                {[
+                  { title: 'Stay ahead', desc: 'Always be 2 weeks ahead on your upload schedule. Never leave a video to the last minute.' },
+                  { title: 'Embrace imperfection', desc: 'Content does not need to be perfect. You are a business owner, not a YouTuber. Just get it done.' },
+                  { title: 'Linear before exponential', desc: 'You can only achieve exponential growth by deserving it first. The game is slow, linear, compounding.' },
+                ].map(({ title, desc }) => (
+                  <div key={title} className="flex items-start gap-4 border border-gray-200 rounded-lg p-5">
+                    <span className="mt-1 w-1.5 h-1.5 bg-amber-400 rounded-full shrink-0"></span>
+                    <div>
+                      <p className="font-medium text-navy-dark mb-1">{title}</p>
+                      <p className="text-sm text-gray-body leading-relaxed">{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
 
             </div>
           </article>
