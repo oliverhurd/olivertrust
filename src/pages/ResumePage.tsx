@@ -9,21 +9,41 @@ export function ResumePage({ setPage }: ResumePageProps) {
       {/* Header Section */}
       <div className="mb-8 text-center">
         <h1 className="text-3xl font-serif font-bold text-navy-dark mb-2">
-          Resume
+          Hi, I'm Oliver!
         </h1>
         <p className="text-base text-gray-body leading-relaxed max-w-2xl mx-auto">
-          Growth and Content Strategist specializing in front-end and back-end marketing,<br className="md:inline" /> and building revenue systems with audiences.
-        </p>
+            I build content systems that develop audiences to monetize and grow revenue.
+          </p>
         <div className="mt-3 flex flex-col sm:flex-row gap-3 justify-center">
           <a
-            href="/cashcow.png"
-            download="Oliver-Resume.pdf"
+            href="/Oliver_Hurd_Resume.pdf"
+            download="Oliver_Hurd_Resume.pdf"
             className="px-6 py-3 bg-white text-navy-dark border border-navy-dark rounded-md font-medium hover:bg-navy-dark hover:text-white transition-all duration-200 text-sm"
           >
             Download my resume
           </a>
         </div>
       </div>
+
+      {/* About Section */}
+      <section className="mb-12">
+        <h2 className="text-xs font-bold text-gray-light tracking-wider uppercase mb-6 border-b border-gray-divider pb-2">
+          ABOUT
+        </h2>
+        <div className="flex flex-col md:flex-row gap-6 items-start">
+        <div className="flex-1">
+            <p className="text-base text-gray-body leading-relaxed">
+              I spent five years building Braveheart Trading from zero — handling content strategy, audience development, back-end systems like newsletters and email marketing, community, and client delivery as a solo operator.
+            </p>
+            <p className="text-base text-gray-body leading-relaxed mt-4">
+              That experience taught me how to think across the entire spectrum, not just one part of it.
+            </p>
+            <p className="text-base text-gray-body leading-relaxed mt-4">
+              I'm now looking to bring that same systems thinking to a team environment — contributing to content strategy and growth inside a brand that's serious about developing an audience and build revenue systems that actually convert.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Experience Section */}
       <section className="mb-12">
@@ -51,18 +71,21 @@ export function ResumePage({ setPage }: ResumePageProps) {
                 </span>
               </div>
               <div className="text-sm text-navy-blue font-medium mb-2">
-                Braveheart Trading | Online Trading Educational Eco-system
+                Braveheart Trading | Online Trading Educational Ecosystem
               </div>
 
             <ul className="space-y-1 text-sm text-gray-body leading-relaxed pl-4 list-disc marker:text-gray-light">
               <li>
-                Designed and built cross-platform content strategy and audience building with value propositioning across YouTube, X (Twitter), and Email Marketing for a combined audience of 50k+ subscribers starting from zero.
+                Built and scaled a cross-platform content ecosystem from zero to 50K+ combined subscribers across YouTube, X (Twitter), and Email — entirely through organic strategy, zero paid ads.
               </li>
               <li>
-                Operated a weekly newsletter, integrated with lead-gen and aquisitional systems, with a consistent 39.6% open-rate across 6.5k+ subscribers with timeless material that drives traffic after its publication.
+               Designed the content strategy, brand positioning, and audience architecture that drove $200K+ in revenue across three offer phases.
               </li>
               <li>
-                Built Sales Pipelines and Sales Funnels generating $200k+ in conversions with market research and Go-to-Market strategies all done organically -- zero paid ads.
+                Operated a weekly newsletter with a consistent 39.6% open rate, built on lead-gen and acquisitional email systems that compound traffic long after publication.
+              </li>
+              <li>
+                Built full sales pipelines and conversion funnels — from cold content audience to warm subscriber to paying customer — using market research and Go-to-Market strategy.
               </li>
             </ul>
             </div>
@@ -92,53 +115,12 @@ export function ResumePage({ setPage }: ResumePageProps) {
 
               <ul className="space-y-1 text-sm text-gray-body leading-relaxed pl-4 list-disc marker:text-gray-light">
                 <li>
-                  Supported and participated in the marketing team during the startup phase of Thailand's leading digital asset exchange.
+                  Joined the marketing team during Bitkub's startup phase, supporting campaign coordination and social media content strategy directly under the Head of Marketing.
                 </li>
                 <li>
-                  Worked directly with the Head of Marketing on social media content strategies and campaign coordination.
-                </li>
-                <li>
-                  Contributed to market research and positioning Bitkub's introduction of blockchain and digital asset technology to new users.
+                  Contributed to market research and positioning for Bitkub's introduction of blockchain and digital asset technology to new users in Thailand.
                 </li>
               </ul>
-            </div>
-          </div>
-
-          <hr className="border-gray-divider" />
-
-          {/* Entry 3 — ShoppingDoneSmart */}
-          <div className="flex flex-col md:flex-row md:items-start gap-4">
-            <div className="w-16 h-16 rounded-lg bg-gray-100 flex-shrink-0 overflow-hidden border border-gray-200">
-              <img 
-                src="/Icons/ShoppingDoneSmartIcon.png" 
-                alt="ShoppingDoneSmart Logo" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex-1">
-              <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
-                <h3 className="text-lg font-serif font-bold text-navy-dark">
-                  Digital Marketing &amp; E-commerce Manager
-                </h3>
-                <span className="text-sm text-gray-light font-medium">
-                  2016 — 2017
-                </span>
-              </div>
-              <div className="text-sm text-navy-blue font-medium mb-2">
-                ShoppingDoneSmart | Global E-com Store
-              </div>
-
-              <ul className="space-y-1 text-sm text-gray-body leading-relaxed pl-4 list-disc marker:text-gray-light">
-              <li>
-                Built and operated a Business to Consumer e-com store selling wholesale products to untapped markets through the medium of influencer marketing.
-              </li>
-              <li>
-                Managed end-to-end operations including research, sourcing, listing, marketing and manual fulfillment with coding and programs.
-              </li>
-              <li>
-                Gained the foundational experience in marketing in the field of global e-commerce, consumer behaviour and psychology, customer journeys and conversion rate optimization.
-              </li>
-            </ul>
             </div>
           </div>
         </div>
@@ -250,44 +232,13 @@ export function ResumePage({ setPage }: ResumePageProps) {
                 </span>
               </div>
               <div className="text-sm text-gray-light font-medium">
-                Bachelor of Business Administration in Marketing
+                Business Administration in Marketing
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section className="mb-12">
-        <h2 className="text-xs font-bold text-gray-light tracking-wider uppercase mb-6 border-b border-gray-divider pb-2">
-          CERTIFICATIONS
-        </h2>
-
-        <div>
-          <div className="flex flex-col md:flex-row md:items-start gap-4">
-            <div className="w-16 h-16 rounded-lg bg-gray-100 flex-shrink-0 overflow-hidden border border-gray-200 flex items-center justify-center">
-              <img 
-                src="/Icons/GoogleITProIcon.png" 
-                alt="Google IT Support Certificate Logo" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex-1">
-              <div className="flex flex-col sm:flex-row sm:items-baseline justify-between mb-1">
-                <h3 className="text-lg font-serif font-bold text-navy-dark">
-                  Google IT Support Professional Certificate
-                </h3>
-                <span className="text-sm text-gray-light font-medium">
-                  Jan — 2026
-                </span>
-              </div>
-              <div className="text-sm text-gray-light font-medium">
-                Troubleshooting, Networking, Sys Admin, Customer Service
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>);
 
 }

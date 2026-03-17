@@ -1,6 +1,10 @@
 import React from 'react';
-import { MailIcon, MapPinIcon, SendIcon } from 'lucide-react';
+import { MailIcon, MapPinIcon, SendIcon, CheckCircleIcon } from 'lucide-react';
+import { useForm, ValidationError } from '@formspree/react';
+
 export function ContactPage() {
+  const [state, handleSubmit] = useForm("mkoqqdlk");
+
   return (
     <main className="max-w-5xl mx-auto px-6 py-24 animate-in fade-in duration-500">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -55,80 +59,81 @@ export function ContactPage() {
               Send a message
             </h2>
 
-            <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-xs font-bold text-gray-light tracking-wider uppercase mb-2">
+            {state.succeeded ? (
+              <div className="flex flex-col items-center justify-center py-12 text-center gap-4">
+                <CheckCircleIcon className="w-10 h-10 text-green-500" />
+                <p className="text-navy-dark font-semibold text-lg">Message sent!</p>
+                <p className="text-gray-body text-sm">Thanks for reaching out — I'll get back to you shortly.</p>
+              </div>
+            ) : (
+              <form className="space-y-8" onSubmit={handleSubmit}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <label htmlFor="name" className="block text-xs font-bold text-gray-light tracking-wider uppercase mb-2">
+                      NAME
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      placeholder="Jane Doe"
+                      className="w-full bg-transparent border-0 border-b border-gray-divider pb-2 px-0 text-navy-dark placeholder:text-gray-300 focus:ring-0 focus:border-navy-dark transition-colors" />
+                    <ValidationError prefix="Name" field="name" errors={state.errors} className="text-red-500 text-xs mt-1" />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-xs font-bold text-gray-light tracking-wider uppercase mb-2">
+                      EMAIL
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="jane@example.com"
+                      className="w-full bg-transparent border-0 border-b border-gray-divider pb-2 px-0 text-navy-dark placeholder:text-gray-300 focus:ring-0 focus:border-navy-dark transition-colors" />
+                    <ValidationError prefix="Email" field="email" errors={state.errors} className="text-red-500 text-xs mt-1" />
+                  </div>
+                </div>
 
-                    NAME
+                <div>
+                  <label htmlFor="subject" className="block text-xs font-bold text-gray-light tracking-wider uppercase mb-2">
+                    SUBJECT
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    placeholder="Jane Doe"
+                    id="subject"
+                    name="subject"
+                    placeholder="How can I help?"
                     className="w-full bg-transparent border-0 border-b border-gray-divider pb-2 px-0 text-navy-dark placeholder:text-gray-300 focus:ring-0 focus:border-navy-dark transition-colors" />
-
                 </div>
+
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-xs font-bold text-gray-light tracking-wider uppercase mb-2">
-
-                    EMAIL
+                  <label htmlFor="message" className="block text-xs font-bold text-gray-light tracking-wider uppercase mb-2">
+                    MESSAGE
                   </label>
-                  <input
-                    type="email"
-                    id="email"
-                    placeholder="jane@example.com"
-                    className="w-full bg-transparent border-0 border-b border-gray-divider pb-2 px-0 text-navy-dark placeholder:text-gray-300 focus:ring-0 focus:border-navy-dark transition-colors" />
-
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    placeholder="Tell me about your project..."
+                    className="w-full bg-transparent border-0 border-b border-gray-divider pb-2 px-0 text-navy-dark placeholder:text-gray-300 focus:ring-0 focus:border-navy-dark transition-colors resize-none">
+                  </textarea>
+                  <ValidationError prefix="Message" field="message" errors={state.errors} className="text-red-500 text-xs mt-1" />
                 </div>
-              </div>
 
-              <div>
-                <label
-                  htmlFor="subject"
-                  className="block text-xs font-bold text-gray-light tracking-wider uppercase mb-2">
-
-                  SUBJECT
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  placeholder="How can I help?"
-                  className="w-full bg-transparent border-0 border-b border-gray-divider pb-2 px-0 text-navy-dark placeholder:text-gray-300 focus:ring-0 focus:border-navy-dark transition-colors" />
-
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-xs font-bold text-gray-light tracking-wider uppercase mb-2">
-
-                  MESSAGE
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  placeholder="Tell me about your project..."
-                  className="w-full bg-transparent border-0 border-b border-gray-divider pb-2 px-0 text-navy-dark placeholder:text-gray-300 focus:ring-0 focus:border-navy-dark transition-colors resize-none">
-                </textarea>
-              </div>
-
-              <div className="pt-4">
-                <button
-                  type="submit"
-                  className="inline-flex items-center px-8 py-3 bg-navy-dark text-white rounded-full font-medium hover:bg-navy-dark/90 transition-colors">
-
-                  Send Message <SendIcon className="w-4 h-4 ml-2" />
-                </button>
-              </div>
-            </form>
+                <div className="pt-4">
+                  <button
+                    type="submit"
+                    disabled={state.submitting}
+                    className="inline-flex items-center px-8 py-3 bg-navy-dark text-white rounded-full font-medium hover:bg-navy-dark/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                    {state.submitting ? 'Sending...' : 'Send Message'}
+                    {!state.submitting && <SendIcon className="w-4 h-4 ml-2" />}
+                  </button>
+                </div>
+              </form>
+            )}
           </div>
         </div>
       </div>
-    </main>);
-
+    </main>
+  );
 }

@@ -9,8 +9,7 @@ export function HomePage({ setPage }: HomePageProps) {
       {/* Hero Section */}
       <section className="max-w-3xl mx-auto px-6 pt-24 pb-20 text-center">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-navy-dark leading-tight mb-6">
-          I build brands online<br className="hidden md:inline" />
-          <span className="md:hidden"> </span>people trust.
+          I build brands people trust.
         </h1>
         <div className="flex flex-wrap justify-center gap-3 mb-6">
           <span className="px-4 py-1.5 bg-navy-blue/10 text-navy-blue text-sm font-medium rounded-full">
@@ -24,27 +23,19 @@ export function HomePage({ setPage }: HomePageProps) {
           </span>
         </div>
         <p className="text-lg text-gray-body leading-relaxed mb-10 max-w-xl mx-auto">
-          Designing front-end and back-end marketing that turns<br className="hidden md:inline" />
-          attention into trust, and trust into revenue.
+          Turning attention into trust, and trust into revenue —<br className="hidden md:inline" />
+          through front-end and back-end marketing systems.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
-            onClick={() => setPage('resume')}
-            className="px-6 py-3 bg-white text-navy-dark border border-navy-dark rounded-md font-medium hover:bg-navy-dark hover:text-white transition-all duration-200 text-sm">
-
-            View my resume
-          </button>
-          <button
             onClick={() => setPage('case-studies')}
-            className="px-6 py-3 bg-white text-navy-dark border border-navy-dark rounded-md font-medium hover:bg-navy-dark hover:text-white transition-all duration-200 text-sm">
-
-            View my case-studies
+            className="px-6 py-3 bg-navy-dark text-white border border-navy-dark rounded-md font-medium hover:bg-navy-dark/90 transition-all duration-200 text-sm">
+            See my work
           </button>
           <button
             onClick={() => setPage('contact')}
             className="px-6 py-3 bg-white text-navy-dark border border-navy-dark rounded-md font-medium hover:bg-navy-dark hover:text-white transition-all duration-200 text-sm">
-
-            Get in touch with me
+            Get in touch
           </button>
         </div>
       </section>
@@ -117,14 +108,13 @@ export function HomePage({ setPage }: HomePageProps) {
           Let's build something together.
         </h2>
         <p className="text-gray-body text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-          I'm currently open to new opportunities and to contribute towards<br className="hidden md:inline" />
-          content strategy, brand building, and establishing growth.
+          Open to full-time roles and select projects in content strategy,<br className="hidden md:inline" />
+          brand building, and growth — remote or relocated.
         </p>
         <button
           onClick={() => setPage('contact')}
           className="px-8 py-3 bg-white text-navy-dark border border-navy-dark rounded-md font-medium hover:bg-navy-dark hover:text-white transition-all duration-200">
-
-          Get in touch with me
+          Get in touch
         </button>
       </section>
     </main>);

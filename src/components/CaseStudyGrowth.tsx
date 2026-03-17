@@ -47,6 +47,37 @@ export function CaseStudyGrowth() {
 
   return (
     <div className="space-y-24 py-20">
-    </div>);
-
+      <section className="border-t border-gray-divider pt-16">
+        <FadeIn>
+          <h2 className="text-xs font-bold uppercase tracking-widest text-gray-light mb-10">
+            Growth System
+          </h2>
+          <p className="text-gray-body leading-relaxed mb-12 max-w-2xl">
+            A seven-stage flywheel — each step feeds the next, compounding over time without paid acquisition.
+          </p>
+          <div className="space-y-0">
+            {steps.map((step, idx) => (
+              <FadeIn key={idx} delay={idx * 0.07}>
+                <div className={`flex gap-6 pb-10 relative ${idx !== steps.length - 1 ? 'border-l border-gray-200 ml-5' : 'ml-5'}`}>
+                  {/* Step number dot */}
+                  <div className={`absolute -left-3.5 top-0 w-7 h-7 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center flex-shrink-0`}>
+                    <span className={`text-xs font-bold ${step.color}`}>{step.num}</span>
+                  </div>
+                  {/* Content */}
+                  <div className="pl-8">
+                    <h3 className={`text-base font-bold mb-1.5 ${step.color}`}>
+                      {step.title}
+                    </h3>
+                    <p className="text-sm text-gray-body leading-relaxed">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </FadeIn>
+      </section>
+    </div>
+  );
 }

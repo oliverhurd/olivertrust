@@ -86,7 +86,7 @@ export function CaseStudyHero({ setPage }: CaseStudyHeroProps) {
           <h2 className="text-2xl font-bold text-gray-900 mb-8">The Problem</h2>
 
           <p className="text-gray-body leading-relaxed mb-5">
-            I built Braveheart Trading into a $200K+ revenue business in one of the hardest niches online — trading education. Low trust, high skepticism, saturated with noise. The standard playbook of paid ads and influencer deals was an option, but it didn't align with Braveheart's Trading MVP (Mission, Vision and Purpose).
+            I built Braveheart Trading into a $200K+ revenue business in one of the hardest niches online — trading education. Low trust, high skepticism, saturated with noise. The standard playbook of paid ads and influencer deals was an option, but it didn't align with Braveheart Trading's core Mission, Vision, and Purpose.
           </p>
           <p className="text-gray-body leading-relaxed mb-8">
             I needed a different model — one built on genuine value, not hype. The goal was to attract the right person, earn their trust over time, and convert that trust into revenue (without shortcuts).
