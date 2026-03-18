@@ -67,27 +67,19 @@ export function HomePage({ setPage }: HomePageProps) {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             <div className="bg-gray-badge border border-gray-divider rounded-lg p-4 text-center">
               <div className="text-2xl font-bold text-navy-dark mb-1">$200K+</div>
-              <div className="text-[10px] font-bold text-gray-light tracking-wider uppercase">
-                REVENUE
-              </div>
+              <div className="text-[10px] font-bold text-gray-light tracking-wider uppercase">REVENUE</div>
             </div>
             <div className="bg-gray-badge border border-gray-divider rounded-lg p-4 text-center">
               <div className="text-2xl font-bold text-navy-dark mb-1">6.5K+</div>
-              <div className="text-[10px] font-bold text-gray-light tracking-wider uppercase">
-                NEWSLETTER
-              </div>
+              <div className="text-[10px] font-bold text-gray-light tracking-wider uppercase">NEWSLETTER</div>
             </div>
             <div className="bg-gray-badge border border-gray-divider rounded-lg p-4 text-center">
               <div className="text-2xl font-bold text-navy-dark mb-1">33K+</div>
-              <div className="text-[10px] font-bold text-gray-light tracking-wider uppercase">
-                X (Twitter)
-              </div>
+              <div className="text-[10px] font-bold text-gray-light tracking-wider uppercase">X (Twitter)</div>
             </div>
             <div className="bg-gray-badge border border-gray-divider rounded-lg p-4 text-center">
               <div className="text-2xl font-bold text-navy-dark mb-1">17K+</div>
-              <div className="text-[10px] font-bold text-gray-light tracking-wider uppercase">
-                YOUTUBE
-              </div>
+              <div className="text-[10px] font-bold text-gray-light tracking-wider uppercase">YOUTUBE</div>
             </div>
           </div>
 
@@ -117,6 +109,6 @@ export function HomePage({ setPage }: HomePageProps) {
           Get in touch
         </button>
       </section>
-    </main>);
-
+    </main>
+  );
 }

@@ -43,18 +43,14 @@ export function CaseStudyHero({ setPage }: CaseStudyHeroProps) {
         </blockquote>
       </FadeIn>
 
-      {/* ════════════════════════════════════════
-          ROLE
-      ════════════════════════════════════════ */}
+      {/* ROLE */}
       <div className="border-t border-gray-divider pt-16 mb-16">
         <FadeIn>
           <p className="text-xs font-bold uppercase tracking-widest text-gray-light mb-6">Role</p>
-
           <h2 className="text-2xl font-bold text-gray-900 mb-3">Founder &amp; Lead Strategist</h2>
           <p className="text-gray-body leading-relaxed max-w-2xl mb-10">
             I ran everything from content strategy and brand positioning to email systems and client delivery. Started solo, scaled with systems.
           </p>
-
           <div className="grid grid-cols-2 md:grid-cols-3 gap-y-3 gap-x-4 mb-8">
             {[
               'Content Strategy',
@@ -75,16 +71,13 @@ export function CaseStudyHero({ setPage }: CaseStudyHeroProps) {
         </FadeIn>
       </div>
 
-      {/* ════════════════════════════════════════
-          EXECUTIVE SUMMARY
-      ════════════════════════════════════════ */}
+      {/* EXECUTIVE SUMMARY */}
       <div className="border-t border-gray-divider pt-16">
         <FadeIn>
           <p className="text-xs font-bold uppercase tracking-widest text-gray-light mb-3">
             Executive Summary
           </p>
           <h2 className="text-2xl font-bold text-gray-900 mb-8">The Problem</h2>
-
           <p className="text-gray-body leading-relaxed mb-5">
             I built Braveheart Trading into a $200K+ revenue business in one of the hardest niches online — trading education. Low trust, high skepticism, saturated with noise. The standard playbook of paid ads and influencer deals was an option, but it didn't align with Braveheart Trading's core Mission, Vision, and Purpose.
           </p>
@@ -93,7 +86,6 @@ export function CaseStudyHero({ setPage }: CaseStudyHeroProps) {
           </p>
 
           <h2 className="text-2xl font-bold text-gray-900 mb-8">The Solution</h2>
-
           <p className="text-gray-body leading-relaxed mb-5">
             Knowing the inherent challenges of the industry (e.g low trust), it was paramount for proper brand positioning.
           </p>
@@ -102,21 +94,15 @@ export function CaseStudyHero({ setPage }: CaseStudyHeroProps) {
           </p>
           <div className="space-y-2.5 mb-8">
             <div className="flex items-center gap-3">
-              <span className="w-5 h-5 rounded-full border border-gray-300 text-gray-500 text-xs flex items-center justify-center shrink-0 font-semibold">
-                1
-              </span>
+              <span className="w-5 h-5 rounded-full border border-gray-300 text-gray-500 text-xs flex items-center justify-center shrink-0 font-semibold">1</span>
               <span className="text-gray-body text-sm">Making them feel understood</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="w-5 h-5 rounded-full border border-gray-300 text-gray-500 text-xs flex items-center justify-center shrink-0 font-semibold">
-                2
-              </span>
+              <span className="w-5 h-5 rounded-full border border-gray-300 text-gray-500 text-xs flex items-center justify-center shrink-0 font-semibold">2</span>
               <span className="text-gray-body text-sm">Becoming aware of the situation</span>
             </div>
             <div className="flex items-center gap-3">
-              <span className="w-5 h-5 rounded-full border border-gray-300 text-gray-500 text-xs flex items-center justify-center shrink-0 font-semibold">
-                3
-              </span>
+              <span className="w-5 h-5 rounded-full border border-gray-300 text-gray-500 text-xs flex items-center justify-center shrink-0 font-semibold">3</span>
               <span className="text-gray-body text-sm">Believing that change is possible</span>
             </div>
           </div>
